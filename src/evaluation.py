@@ -94,37 +94,6 @@ def plot_confusion_matrix(y_true, y_pred, model_name: str, filename: str):
 
 
 # ---------------------------------------------------------------------------
-# ROC curve plot
-# ---------------------------------------------------------------------------
-
-def plot_roc_curves(y_test, rf_prob, lr_prob):
-    """Plot ROC curves for both models on the same axes."""
-    fig, ax = plt.subplots(figsize=(8, 6))
-
-    for prob, label, color in [
-        (rf_prob, "Random Forest", "#2ECC71"),
-        (lr_prob, "Logistic Regression", "#3498DB"),
-    ]:
-        if prob is not None:
-            fpr, tpr, _ = roc_curve(y_test, prob)
-            auc = roc_auc_score(y_test, prob)
-            ax.plot(fpr, tpr, label=f"{label} (AUC = {auc:.3f})", color=color, linewidth=2)
-
-    ax.plot([0, 1], [0, 1], "k--", linewidth=1, label="Random Classifier")
-    ax.set_title("ROC Curves — Model Comparison", fontsize=14, fontweight="bold")
-    ax.set_xlabel("False Positive Rate", fontsize=12)
-    ax.set_ylabel("True Positive Rate", fontsize=12)
-    ax.legend(fontsize=11)
-    fig.tight_layout()
-
-    path = config.FIGURES_DIR / "09_roc_curves.png"
-    fig.savefig(path, dpi=config.FIGURE_DPI, bbox_inches="tight")
-    plt.close(fig)
-    print(f"[evaluation] ROC curves saved → {path}")
-    return path
-
-
-# ---------------------------------------------------------------------------
 # Feature importance plot
 # ---------------------------------------------------------------------------
 
@@ -240,15 +209,6 @@ def evaluate_all_models(training_results: dict) -> dict:
     rf_pred = rf_pipeline.predict(X_test)
     lr_pred = lr_pipeline.predict(X_test)
 
-    # Probabilities (for ROC)
-    try:
-        rf_prob = rf_pipeline.predict_proba(X_test)[:, 1]
-    except Exception:
-        rf_prob = None
-    try:
-        lr_prob = lr_pipeline.predict_proba(X_test)[:, 1]
-    except Exception:
-        lr_prob = None
 
     # Metrics
     rf_metrics = compute_metrics(y_test, rf_pred, rf_prob, "Random Forest")
@@ -258,8 +218,6 @@ def evaluate_all_models(training_results: dict) -> dict:
     plot_confusion_matrix(y_test, rf_pred, "Random Forest",   "11_cm_random_forest.png")
     plot_confusion_matrix(y_test, lr_pred, "Logistic Regression", "12_cm_logistic_regression.png")
 
-    # ROC curves
-    plot_roc_curves(y_test, rf_prob, lr_prob)
 
     # Feature importance
     plot_feature_importance(rf_importance)

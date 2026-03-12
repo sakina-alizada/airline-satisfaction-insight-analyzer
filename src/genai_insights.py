@@ -233,7 +233,6 @@ Two models were trained on an 80/20 stratified train-test split:
 | Precision | {rf_prec} | {lr_prec} |
 | Recall    | {rf_rec}  | {lr_rec}  |
 | F1 Score  | {rf_f1}   | {lr_f1}   |
-| ROC-AUC   | {rf_auc}  | {lr_auc}  |
 
 **Winner: {best_model}**
 
