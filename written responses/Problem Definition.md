@@ -1,4 +1,4 @@
-# Written Response 1 – Problem Definition
+# Problem Definition
 
 Airlines collect large volumes of passenger satisfaction survey data after flights. These surveys contain valuable information about passenger experiences, including ratings for services such as seat comfort, inflight entertainment, Wi‑Fi connectivity, check‑in experience, and boarding process. However, analyzing large volumes of survey responses manually is slow and difficult, making it challenging for decision makers to quickly identify the most important drivers of satisfaction and dissatisfaction.
 
