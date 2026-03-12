@@ -128,7 +128,7 @@ This executes all six steps and prints output locations when finished.
 ### Custom dataset path
 
 ```bash
-python main.py --data path/to/your_dataset.csv
+python main.py --data path/to/dataset.csv
 ```
 
 ### Skip visualisations (faster debug)
@@ -144,7 +144,6 @@ export OPENAI_API_KEY="sk-..."
 python main.py
 ```
 
-If `OPENAI_API_KEY` is not set, a high-quality rule-based report is generated automatically.
 
 ### Interactive notebook
 
