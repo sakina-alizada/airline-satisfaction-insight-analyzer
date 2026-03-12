@@ -1,7 +1,3 @@
-# src/evaluation.py
-# Computes evaluation metrics, plots confusion matrices and feature
-# importance charts, compares both models, and persists results to disk.
-
 import json
 import warnings
 

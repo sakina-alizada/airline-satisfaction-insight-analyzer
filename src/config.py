@@ -1,8 +1,3 @@
-# src/config.py
-# Central configuration for the airline satisfaction project.
-# All paths, constants, and hyper-parameters live here so that
-# any other module can import them without hard-coding values.
-
 import os
 from pathlib import Path
 

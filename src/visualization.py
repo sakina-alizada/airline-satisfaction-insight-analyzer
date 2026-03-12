@@ -1,8 +1,3 @@
-# src/visualization.py
-# Creates and saves all exploratory data analysis visualisations.
-# Every function saves a PNG to outputs/figures/ and returns the
-# figure object so it can also be rendered inline in notebooks.
-
 import warnings
 import numpy as np
 import pandas as pd

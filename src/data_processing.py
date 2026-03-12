@@ -1,8 +1,3 @@
-# src/data_processing.py
-# Handles all data loading, cleaning, and feature engineering.
-# Designed to be robust to minor column-name variations across
-# different versions of the airline satisfaction dataset.
-
 import re
 import warnings
 

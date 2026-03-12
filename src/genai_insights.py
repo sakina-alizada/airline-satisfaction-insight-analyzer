@@ -1,14 +1,3 @@
-# src/genai_insights.py
-# Generates a natural-language insight report from model metrics,
-# dataset statistics, and feature importances.
-#
-# Strategy
-# --------
-# 1. If an OPENAI_API_KEY is set, call the OpenAI Chat API to produce
-#    a polished AI-generated report.
-# 2. Otherwise, fall back to a rule-based template that uses the same
-#    data to produce a detailed, professional Markdown document.
-
 import os
 import json
 import textwrap

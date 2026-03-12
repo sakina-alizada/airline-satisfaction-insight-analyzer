@@ -1,11 +1,3 @@
-# src/model_training.py
-# Builds, trains, and persists the two classification models:
-#   1. RandomForestClassifier  (Model 1)
-#   2. LogisticRegression      (Model 2)
-#
-# Each model is wrapped in a full sklearn Pipeline that includes
-# the preprocessing step built in data_processing.py.
-
 import json
 import joblib
 import numpy as np

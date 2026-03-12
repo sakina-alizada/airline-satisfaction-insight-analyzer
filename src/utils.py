@@ -1,6 +1,3 @@
-# src/utils.py
-# General-purpose helper utilities used across the project.
-
 import json
 import time
 import functools
