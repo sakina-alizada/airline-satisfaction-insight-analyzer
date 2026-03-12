@@ -168,10 +168,9 @@ outputs/
 │   ├── 06_correlation_heatmap.png
 │   ├── 07_service_ratings.png
 │   ├── 08_age_distribution.png
-│   ├── 09_roc_curves.png
-│   ├── 10_feature_importance.png
-│   ├── 11_cm_random_forest.png
-│   └── 12_cm_logistic_regression.png
+│   ├── 09_feature_importance.png
+│   ├── 10_cm_random_forest.png
+│   └── 11_cm_logistic_regression.png
 │
 ├── reports/
 │   └── ai_insight_report.md        ← Executive summary report
@@ -188,6 +187,8 @@ outputs/
 | Metric | Random Forest | Logistic Regression |
 |--------|:------------:|:-------------------:|
 | Accuracy | ~0.96 | ~0.87 |
+| Precision | ~0.95 | ~0.86 |
+| Recall | ~0.96 | ~0.87 |
 | F1 Score | ~0.96 | ~0.87 |
 
 ---
@@ -212,7 +213,7 @@ outputs/
 | Train/test split | 80/20 stratified split (`src/data_processing.py` → `split_data()`) |
 | Preprocessing pipeline | `ColumnTransformer` with imputation, scaling, one-hot encoding |
 | Model comparison | Side-by-side metrics table in `src/evaluation.py` → `compare_models()` |
-| Evaluation metrics | Accuracy, Precision, Recall, F1, ROC-AUC, Confusion Matrix |
+| Evaluation metrics | Accuracy, Precision, Recall, F1, Confusion Matrix |
 | Feature importance | Extracted from Random Forest, saved to CSV |
 
 ### Generative AI
