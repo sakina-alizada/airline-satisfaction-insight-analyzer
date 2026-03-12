@@ -1,21 +1,3 @@
-#!/usr/bin/env python3
-# main.py
-# ──────────────────────────────────────────────────────────────────────────
-# Airline Passenger Satisfaction Insight Analyzer — Full Pipeline
-#
-# Usage:
-#   python main.py
-#   python main.py --data path/to/custom_data.csv
-#
-# Steps executed:
-#   1. Dataset validation
-#   2. Data loading & cleaning
-#   3. Exploratory visualisations
-#   4. Model training (Random Forest + Logistic Regression)
-#   5. Model evaluation & comparison
-#   6. AI insight report generation
-# ──────────────────────────────────────────────────────────────────────────
-
 import argparse
 import sys
 import time
